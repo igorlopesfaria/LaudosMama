@@ -15,4 +15,6 @@
     <string name="onboarding_label_surname">Sobrenome</string>
     <string name="onboarding_label_email">Email</string>
     <string name="onboarding_label_birthday">Data de Nascimento</string>
+    <string name="onboarding_reset_password_description">Esqueceu sua senha? Não tem problema! Informe o CPF cadastrado que iremos enviar para seu email uma senho senha de acesso.</string>
+    <string name="onboarding_reset_password">Recuperar Senha</string>
 </resources>

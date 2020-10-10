@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.NavHostFragment
+import br.com.laudosmama.features.base.BaseActivity
 import br.com.laudosmama.features.base.BaseFragment
 import br.com.laudosmama.features.onboarding.databinding.OnboardingFragmentLoginBinding
 import br.com.laudosmama.onboarding.welcome.WelcomeFragmentDirections
@@ -23,6 +24,8 @@ class LoginFragment: BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as BaseActivity).setSupportActionBar(binding.toolbar)
+        (activity as BaseActivity).supportActionBar?.title = null
         setupListeners()
     }
 

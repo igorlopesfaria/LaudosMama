@@ -94,6 +94,13 @@
     <style name="UIToolkit.Text.Body.Regular.Base75">
         <item name="android:textColor">@color/base_75</item>
     </style>
+    <style name="UIToolkit.Text.Body.Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontWeight">500</item>
+    </style>
+    <style name="UIToolkit.Text.Body.Medium.Base75">
+        <item name="android:textColor">@color/base_75</item>
+    </style>
     <style name="UIToolkit.Text.Body.Bold">
         <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
