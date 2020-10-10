@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.LaudosMama" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/main_purple</item>
+        <item name="colorPrimaryDark">@color/main_purple_dark</item>
+        <item name="colorControlNormal">@color/main_purple</item>
+
+        <!--        <item name="colorSecondary">@color/main_color_dark</item>-->
+<!--        <item name="colorAccent">@color/main_color_light</item>-->
+        <item name="android:buttonStyle">@style/UIToolkit.Widget.Button</item>
+        <item name="colorControlActivated">@color/main_purple</item>
+        <item name="colorControlHighlight">@color/main_purple</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_baseline_arrow_back</item>
+    </style>
+
+</resources>

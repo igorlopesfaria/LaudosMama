@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="UIToolkit"/>
+    <!--  region Buttons -->
+    <style name="UIToolkit.Widget" />
+
+    <style name="UIToolkit.Widget.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/background_button_primary</item>
+        <item name="android:height">@dimen/height_custom_button</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@drawable/text_color_button_primary</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="UIToolkit.Widget.Button.Secondary">
+        <item name="android:background">@drawable/background_button_secondary</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/base_dark</item>
+    </style>
+    <style name="UIToolkit.Widget.Button.Transparent">
+        <item name="android:background">@drawable/background_button_transparent</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/base_dark</item>
+        <item name="android:paddingStart">@dimen/space_view_extra_big</item>
+        <item name="android:paddingEnd">@dimen/space_view_extra_big</item>
+    </style>
+
+    <style name="UIToolkit.Text" />
+    <style name="UIToolkit.Text.Caption">
+        <item name="android:textSize">@dimen/text_caption</item>
+    </style>
+    <style name="UIToolkit.Text.Body">
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+    <style name="UIToolkit.Text.Subtitle">
+        <item name="android:textSize">@dimen/text_subtitle</item>
+    </style>
+    <style name="UIToolkit.Text.Title">
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+    <style name="UIToolkit.Text.BigTitle">
+        <item name="android:textSize">@dimen/text_big_title</item>
+    </style>
+    <style name="UIToolkit.Text.SplashTitle">
+        <item name="android:textSize">@dimen/text_splash_title</item>
+    </style>
+
+    <style name="UIToolkit.Text.Caption.Regular">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+    <style name="UIToolkit.Text.Caption.Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="UIToolkit.Text.Caption.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+    <style name="UIToolkit.Text.Caption.Regular.BaseDark">
+        <item name="android:textColor">@color/base_dark</item>
+    </style>
+    <style name="UIToolkit.Text.Caption.Regular.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="UIToolkit.Text.Caption.Regular.MainPurple">
+        <item name="android:textColor">@color/main_purple</item>
+    </style>
+    <style name="UIToolkit.Text.Caption.Regular.Base75">
+        <item name="android:textColor">@color/base_75</item>
+    </style>
+    <style name="UIToolkit.Text.Caption.Medium.BaseDark">
+        <item name="android:textColor">@color/base_dark</item>
+    </style>
+    <style name="UIToolkit.Text.Caption.Medium.Base75">
+        <item name="android:textColor">@color/base_75</item>
+    </style>
+    <style name="UIToolkit.Text.Caption.Bold.BaseDark">
+        <item name="android:textColor">@color/base_dark</item>
+    </style>
+    <style name="UIToolkit.Text.Caption.Bold.Base75">
+        <item name="android:textColor">@color/base_75</item>
+    </style>
+
+
+    <style name="UIToolkit.Text.Body.Regular">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+    <style name="UIToolkit.Text.Body.Regular.MainPurple">
+        <item name="android:textColor">@color/main_purple</item>
+    </style>
+       <style name="UIToolkit.Text.Body.Regular.BaseDark">
+        <item name="android:textColor">@color/base_dark</item>
+    </style>
+    <style name="UIToolkit.Text.Body.Regular.Base75">
+        <item name="android:textColor">@color/base_75</item>
+    </style>
+    <style name="UIToolkit.Text.Body.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+    <style name="UIToolkit.Text.Body.Bold.BaseDark">
+        <item name="android:textColor">@color/base_dark</item>
+    </style>
+
+    <style name="UIToolkit.Text.Subtitle.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+    <style name="UIToolkit.Text.Subtitle.Bold.BaseDark">
+        <item name="android:textColor">@color/base_dark</item>
+    </style>
+    <style name="UIToolkit.Text.Subtitle.Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="UIToolkit.Text.Subtitle.Medium.Base75">
+        <item name="android:textColor">@color/base_75</item>
+    </style>
+
+    <style name="UIToolkit.Text.Title.Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontWeight">500</item>
+    </style>
+    <style name="UIToolkit.Text.Title.Medium.BaseDark">
+        <item name="android:textColor">@color/base_dark</item>
+    </style>
+
+    <style name="UIToolkit.Text.Title.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+    <style name="UIToolkit.Text.Title.Bold.BaseDark">
+        <item name="android:textColor">@color/base_dark</item>
+    </style>
+
+    <style name="UIToolkit.Text.BigTitle.Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="fontWeight">500</item>
+    </style>
+    <style name="UIToolkit.Text.BigTitle.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+    <style name="UIToolkit.Text.BigTitle.Bold.BaseDark">
+        <item name="android:textColor">@color/base_dark</item>
+    </style>
+    <style name="UIToolkit.Text.BigTitle.Bold.MainPurple">
+        <item name="android:textColor">@color/main_purple</item>
+    </style>
+
+    <style name="UIToolkit.Text.SplashTitle.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+    <style name="UIToolkit.Text.SplashTitle.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <!-- region InputLayout -->
+    <style name="UIToolkit.Widget.BaseTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="fontWeight">500</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingEnd">@dimen/space_view_zero</item>
+        <item name="android:paddingRight">@dimen/space_view_zero</item>
+        <item name="android:paddingStart">@dimen/space_view_zero</item>
+        <item name="android:paddingLeft">@dimen/space_view_zero</item>
+        <item name="editTextStyle">@style/UIToolkit.Widget.TextInputEditText</item>
+        <item name="errorTextAppearance">@style/UIToolkit.Widget.TextErrorAppearance</item>
+        <item name="errorEnabled">true</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="UIToolkit.Widget.TextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:textColor">@color/base_dark</item>
+        <item name="android:textColorHint">@color/base_25</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="fontWeight">500</item>
+        <item name="android:paddingEnd">@dimen/space_view_zero</item>
+        <item name="android:paddingStart">@dimen/space_view_zero</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">20dp</item>
+    </style>
+    
+    <style name="UIToolkit.Widget.TextErrorAppearance" parent="TextAppearance.Design.Error">
+        <item name="android:textColor">@color/status_alert</item>
+        <item name="android:textSize">@dimen/text_caption</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+
+    <style name="UIToolkit.Widget.Toolbar.White" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/white</item>
+        <item name="titleTextAppearance">@style/UIToolkit.Widget.Toolbar.White.Title</item>
+    </style>
+    <style name="UIToolkit.Widget.Toolbar.White.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/main_purple</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="UIToolkit.Widget.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/base_dark</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:background">@drawable/background_edittext</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="fontWeight">500</item>
+        <item name="android:paddingEnd">@dimen/space_view_medium</item>
+        <item name="android:paddingStart">@dimen/space_view_medium</item>
+    </style>
+
+
+</resources>

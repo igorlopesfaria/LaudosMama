@@ -1,0 +1,13 @@
+include ':repository:remote'
+include ':repository:database'
+include ':repository'
+include ':analytics'
+include ':features:home'
+include ':features:reports'
+include ':features:laboratory'
+include ':features:profile'
+include ':features:onboarding'
+include ':features'
+include ':uitoolkit'
+include ':app'
+rootProject.name = "LaudoMama"

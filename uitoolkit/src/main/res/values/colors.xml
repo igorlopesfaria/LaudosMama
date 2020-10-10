@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_background">#f4b5c8</color>
+
+    <color name="main_pink_light">#ff6893</color>
+    <color name="main_pink">#DF5D86</color>
+    <color name="main_pink_dark">#bf486a</color>
+
+    <color name="main_purple_light">#D33DD3</color>
+    <color name="main_purple">#943194</color>
+    <color name="main_purple_dark">#772677</color>
+
+    <color name="base_dark">#943194</color>
+    <color name="base_75">#a737a7</color>
+    <color name="base_50">#ba3eba</color>
+    <color name="base_30">#c44dc4</color>
+    <color name="base_25">#dd98dd</color>
+    <color name="base_10">#e7b6e7</color>
+    <color name="base_5">#faf1fa</color>
+
+    <color name="ripple_blue">#faf1fa</color>
+    <color name="ripple_light">#33ffffff</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="status_alert">#FF2948</color>
+    <color name="status_alert_50_percent">#88FF2948</color>
+
+
+</resources>

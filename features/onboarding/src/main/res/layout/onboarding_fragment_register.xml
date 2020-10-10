@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/UIToolkit.Widget.Toolbar.White"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_toolbar_standard"
+            android:minHeight="?actionBarSize"
+            app:layout_collapseMode="pin"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back"
+            app:title="">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/UIToolkit.Widget.Toolbar.White.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/onboarding_register_title" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/space_view_extra">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hintName"
+                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginTop="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:text="@string/onboarding_label_name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:viewBindingIgnore="true"/>
+
+            <EditText
+                android:id="@+id/nameEditText"
+                style="@style/UIToolkit.Widget.EditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_custom_edittext"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/space_view_little"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hintName"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hintSurname"
+                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginTop="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:text="@string/onboarding_label_surname"
+                app:layout_constraintTop_toBottomOf="@+id/nameEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:viewBindingIgnore="true"/>
+
+            <EditText
+                android:id="@+id/surnameEditText"
+                style="@style/UIToolkit.Widget.EditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_custom_edittext"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/space_view_little"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hintSurname"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hintBirthday"
+                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginTop="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:text="@string/onboarding_label_birthday"
+                app:layout_constraintTop_toBottomOf="@+id/surnameEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:viewBindingIgnore="true"/>
+
+            <EditText
+                android:id="@+id/birthdayEditText"
+                style="@style/UIToolkit.Widget.EditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_custom_edittext"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/space_view_little"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:enabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/hintBirthday"/>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/calendarImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:src="@drawable/ic_baseline_calendar"
+                app:layout_constraintTop_toTopOf="@+id/birthdayEditText"
+                app:layout_constraintEnd_toEndOf="@+id/birthdayEditText"
+                app:layout_constraintBottom_toBottomOf="@+id/birthdayEditText" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hintCPF"
+                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginTop="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:text="@string/onboarding_label_cpf"
+                app:layout_constraintTop_toBottomOf="@+id/birthdayEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:viewBindingIgnore="true"/>
+
+            <EditText
+                android:id="@+id/cpfEditText"
+                style="@style/UIToolkit.Widget.EditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_custom_edittext"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/space_view_little"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hintCPF"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hintEmail"
+                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginTop="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:text="@string/onboarding_label_email"
+                app:layout_constraintTop_toBottomOf="@+id/cpfEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:viewBindingIgnore="true"/>
+
+            <EditText
+                android:id="@+id/emailEditText"
+                style="@style/UIToolkit.Widget.EditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_custom_edittext"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="@dimen/space_view_little"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hintEmail"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hintPassword"
+                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginTop="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:text="@string/onboarding_label_password"
+                app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:viewBindingIgnore="true"/>
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                style="@style/UIToolkit.Widget.EditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_custom_edittext"
+                android:inputType="textPassword"
+                android:layout_marginTop="@dimen/space_view_little"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hintPassword"/>
+
+
+            <br.com.laudosmama.uitoolkit.button.LoaderButton
+                android:id="@+id/registerButton"
+                style="@style/UIToolkit.Widget.Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_custom_button"
+                android:layout_marginTop="@dimen/space_view_extra"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                app:uitoolkit_title="@string/onboarding_register"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

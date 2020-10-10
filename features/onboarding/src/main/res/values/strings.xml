@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_register_title">Cadastrar</string>
+    <string name="onboarding_login_title">Entrar</string>
+    <string name="onboarding_welcome_title">Acompanhe seu laudo</string>
+    <string name="onboarding_welcome_description">Esse aplicativo vai auxiliar você acompanhar junto com seu médico suas mamografias.</string>
+    <string name="onboarding_reset_password_title">Recuperar Senha</string>
+    <string name="onboarding_label_cpf">CPF</string>
+    <string name="onboarding_label_password">Senha</string>
+    <string name="onboarding_login_forgot_password_question"><u>Esqueceu sua senha?</u></string>
+    <string name="onboarding_enter">Entrar</string>
+    <string name="onboarding_login_warn_to_register">Não tem conta ainda?</string>
+    <string name="onboarding_register">Cadastrar</string>
+    <string name="onboarding_label_name">Nome</string>
+    <string name="onboarding_label_surname">Sobrenome</string>
+    <string name="onboarding_label_email">Email</string>
+    <string name="onboarding_label_birthday">Data de Nascimento</string>
+</resources>
