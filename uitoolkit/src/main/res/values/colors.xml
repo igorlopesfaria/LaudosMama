@@ -18,6 +18,18 @@
     <color name="base_10">#e7b6e7</color>
     <color name="base_5">#faf1fa</color>
 
+    <color name="gray_base_dark">#191f28</color>
+    <color name="gray_base_75">#4C576C</color>
+    <color name="gray_base_70">#50525f</color>
+    <color name="gray_base_50">#848C9B</color>
+    <color name="gray_base_35">#A9AFB9</color>
+    <color name="gray_base_30">#B3B9C1</color>
+    <color name="gray_base_25">#BDC2C9</color>
+    <color name="gray_base_20">#CDD1D7</color>
+    <color name="gray_base_15">#DDE0E4</color>
+    <color name="gray_base_5">#F5F7F8</color>
+    <color name="gray_base_70_5_percent">#0d50525f</color>
+
     <color name="ripple_blue">#faf1fa</color>
     <color name="ripple_light">#33ffffff</color>
 

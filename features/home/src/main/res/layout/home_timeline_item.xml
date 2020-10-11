@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/item_selector"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_height="74dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/examDateTextView"
+        style="@style/UIToolkit.Text.Caption.Medium.GrayBase75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:text="23/09/1986"
+        app:layout_constraintBottom_toBottomOf="@+id/circleGray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/circleGray" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/circleGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginTop="@dimen/space_view_little"
+        android:src="@drawable/circle_timeline_gray"
+        app:layout_constraintStart_toEndOf="@+id/examDateTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/lineNextGray"
+        android:layout_width="8dp"
+        android:layout_height="60dp"
+        android:background="#DDE0E4"
+        app:layout_constraintEnd_toEndOf="@+id/circleGray"
+        app:layout_constraintStart_toStartOf="@+id/circleGray"
+        app:layout_constraintTop_toBottomOf="@+id/center" />
+    <View
+        android:id="@+id/center"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/circlePurple"
+        app:layout_constraintStart_toStartOf="@+id/circlePurple"
+        app:layout_constraintTop_toTopOf="@+id/circlePurple"
+        app:layout_constraintBottom_toBottomOf="@id/circlePurple"/>
+    <View
+        android:id="@+id/lineBeforeGray"
+        android:layout_width="8dp"
+        android:layout_height="10dp"
+        android:background="#DDE0E4"
+        app:layout_constraintEnd_toEndOf="@+id/circleGray"
+        app:layout_constraintStart_toStartOf="@+id/circleGray"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/circlePurple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_timeline_purple"
+        app:layout_constraintStart_toStartOf="@+id/circleGray"
+        app:layout_constraintEnd_toEndOf="@+id/circleGray"
+        app:layout_constraintTop_toTopOf="@+id/circleGray"
+        app:layout_constraintBottom_toBottomOf="@+id/circleGray"/>
+    <View
+        android:id="@+id/lineNextPurple"
+        android:layout_width="3dp"
+        android:layout_height="0dp"
+        android:background="@color/base_10"
+        app:layout_constraintBottom_toBottomOf="@+id/lineNextGray"
+        app:layout_constraintEnd_toEndOf="@+id/lineNextGray"
+        app:layout_constraintStart_toStartOf="@+id/lineNextGray"
+        app:layout_constraintTop_toBottomOf="@+id/center"/>
+
+    <View
+        android:id="@+id/lineBeforePurple"
+        android:layout_width="3dp"
+        android:layout_height="10dp"
+        android:background="@color/base_10"
+        app:layout_constraintEnd_toEndOf="@+id/lineNextGray"
+        app:layout_constraintStart_toStartOf="@+id/lineNextGray"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/rightBreastTextView"
+        style="@style/UIToolkit.Text.Caption.Regular.GrayBase75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:text="Mama direita: B1"
+        app:layout_constraintBottom_toBottomOf="@+id/circleGray"
+        app:layout_constraintStart_toEndOf="@id/circleGray"
+        app:layout_constraintTop_toTopOf="@+id/circleGray" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/leftBreastTextView"
+        style="@style/UIToolkit.Text.Caption.Regular.GrayBase75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginTop="@dimen/space_view_little"
+        android:text="Mama esquerda: B1"
+        app:layout_constraintStart_toEndOf="@id/circleGray"
+        app:layout_constraintTop_toBottomOf="@id/rightBreastTextView" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/attachImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="@dimen/space_view_medium"
+        android:background="@drawable/item_selector"
+        android:src="@drawable/ic_baseline_attach_file_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/circleGray" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

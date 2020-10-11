@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".HomeActivity">
+    <fragment
+        android:id="@+id/homeProfile"
+        android:name="br.com.laudosmama.home.profile.view.HomeProfileFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout="@layout/home_profile_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <fragment
+        android:id="@+id/home_timeline"
+        android:name="br.com.laudosmama.home.timeline.view.HomeTimelineFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="@dimen/space_view_huge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeProfile"
+        tools:layout="@layout/home_timeline_fragment" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerExamButton"
+        style="@style/UIToolkit.Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_custom_button"
+        android:text="@string/home_register_exam"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginEnd="@dimen/space_view_medium"
+        android:layout_marginBottom="@dimen/space_view_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -68,11 +68,17 @@
     <style name="UIToolkit.Text.Caption.Regular.Base75">
         <item name="android:textColor">@color/base_75</item>
     </style>
+    <style name="UIToolkit.Text.Caption.Regular.GrayBase75">
+        <item name="android:textColor">@color/gray_base_75</item>
+    </style>
     <style name="UIToolkit.Text.Caption.Medium.BaseDark">
         <item name="android:textColor">@color/base_dark</item>
     </style>
     <style name="UIToolkit.Text.Caption.Medium.Base75">
         <item name="android:textColor">@color/base_75</item>
+    </style>
+    <style name="UIToolkit.Text.Caption.Medium.GrayBase75">
+        <item name="android:textColor">@color/gray_base_75</item>
     </style>
     <style name="UIToolkit.Text.Caption.Bold.BaseDark">
         <item name="android:textColor">@color/base_dark</item>
@@ -91,8 +97,14 @@
        <style name="UIToolkit.Text.Body.Regular.BaseDark">
         <item name="android:textColor">@color/base_dark</item>
     </style>
+    <style name="UIToolkit.Text.Body.Regular.GrayBaseDark">
+        <item name="android:textColor">@color/gray_base_dark</item>
+    </style>
     <style name="UIToolkit.Text.Body.Regular.Base75">
         <item name="android:textColor">@color/base_75</item>
+    </style>
+    <style name="UIToolkit.Text.Body.Regular.GrayBase75">
+        <item name="android:textColor">@color/gray_base_75</item>
     </style>
     <style name="UIToolkit.Text.Body.Medium">
         <item name="android:fontFamily">@font/roboto_medium</item>
@@ -100,6 +112,9 @@
     </style>
     <style name="UIToolkit.Text.Body.Medium.Base75">
         <item name="android:textColor">@color/base_75</item>
+    </style>
+    <style name="UIToolkit.Text.Body.Medium.GrayBase75">
+        <item name="android:textColor">@color/gray_base_75</item>
     </style>
     <style name="UIToolkit.Text.Body.Bold">
         <item name="android:fontFamily">@font/roboto_bold</item>
@@ -146,6 +161,11 @@
     <style name="UIToolkit.Text.BigTitle.Bold.BaseDark">
         <item name="android:textColor">@color/base_dark</item>
     </style>
+    <style name="UIToolkit.Text.BigTitle.Bold.GrayBaseDark">
+        <item name="android:textColor">@color/gray_base_dark</item>
+    </style>
+
+
     <style name="UIToolkit.Text.BigTitle.Bold.MainPurple">
         <item name="android:textColor">@color/main_purple</item>
     </style>
@@ -203,7 +223,7 @@
     </style>
 
     <style name="UIToolkit.Widget.EditText" parent="Widget.AppCompat.EditText">
-        <item name="android:textColor">@color/base_dark</item>
+        <item name="android:textColor">@color/gray_base_dark</item>
         <item name="android:textSize">@dimen/text_body</item>
         <item name="android:background">@drawable/background_edittext</item>
         <item name="fontFamily">@font/roboto_medium</item>

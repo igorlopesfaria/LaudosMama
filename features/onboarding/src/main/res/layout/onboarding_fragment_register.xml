@@ -48,7 +48,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/hintName"
-                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space_view_medium"
@@ -75,7 +75,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/hintSurname"
-                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space_view_medium"
@@ -102,7 +102,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/hintBirthday"
-                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space_view_medium"
@@ -140,7 +140,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/birthdayEditText" />
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/hintCPF"
-                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space_view_medium"
@@ -168,7 +168,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/hintEmail"
-                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space_view_medium"
@@ -195,7 +195,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/hintPassword"
-                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space_view_medium"

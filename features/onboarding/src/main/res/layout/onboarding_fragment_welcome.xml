@@ -27,7 +27,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/title"
-            style="@style/UIToolkit.Text.BigTitle.Bold.MainPurple"
+            style="@style/UIToolkit.Text.BigTitle.Bold.GrayBaseDark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/descriptionTextView"
-            style="@style/UIToolkit.Text.Body.Regular.MainPurple"
+            style="@style/UIToolkit.Text.Body.Regular.GrayBaseDark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_view_little"

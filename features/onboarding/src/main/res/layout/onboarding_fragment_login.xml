@@ -48,7 +48,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/hintCPF"
-                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space_view_medium"
@@ -75,7 +75,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/hintPassword"
-                style="@style/UIToolkit.Text.Body.Regular.Base75"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space_view_medium"
@@ -127,7 +127,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/forgotPasswordTextView" />
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/warn"
-                style="@style/UIToolkit.Text.Caption.Regular.Base75"
+                style="@style/UIToolkit.Text.Caption.Regular.GrayBase75"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space_view_medium"

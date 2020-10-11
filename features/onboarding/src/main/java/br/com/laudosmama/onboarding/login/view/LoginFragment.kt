@@ -1,5 +1,6 @@
 package br.com.laudosmama.onboarding.login.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +9,7 @@ import androidx.navigation.fragment.NavHostFragment
 import br.com.laudosmama.features.base.BaseActivity
 import br.com.laudosmama.features.base.BaseFragment
 import br.com.laudosmama.features.onboarding.databinding.OnboardingFragmentLoginBinding
-import br.com.laudosmama.onboarding.welcome.WelcomeFragmentDirections
+
 
 class LoginFragment: BaseFragment() {
     private lateinit var binding: OnboardingFragmentLoginBinding
@@ -31,6 +32,12 @@ class LoginFragment: BaseFragment() {
 
     private fun setupListeners() {
         binding.loginButton.setOnClickListener {
+            val intent = Intent(
+                requireContext(),
+                Class.forName("br.com.laudosmama.home.HomeActivity")
+            )
+            activity?.finish()
+            startActivity(intent)
         }
 
         binding.forgotPasswordTextView.setOnClickListener {
