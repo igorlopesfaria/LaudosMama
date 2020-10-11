@@ -47,6 +47,9 @@ class HomeTimelineAdapter(private val clickListener: ((HomeTimeline) -> Unit)) :
                 itemBinding.lineNextPurple.visibility = View.GONE
             }
 
+            if (position % 2 == 2)
+                itemBinding.shouldIndicateLabImageView.visibility = View.GONE
+
             itemView.setOnClickListener {
                 listener(item)
             }
