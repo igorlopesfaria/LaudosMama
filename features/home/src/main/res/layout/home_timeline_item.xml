@@ -110,7 +110,9 @@
         android:layout_height="40dp"
         android:layout_marginEnd="@dimen/space_view_little"
         android:background="@drawable/item_selector"
-        android:src="@drawable/ic_laboratory"
+        android:padding="7dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_mammography"
         app:layout_constraintEnd_toStartOf="@id/attachImageView"
         app:layout_constraintTop_toTopOf="@+id/circleGray" />
 
@@ -119,7 +121,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="@dimen/space_view_medium"
-        android:scaleType="center"
+        android:scaleType="centerInside"
         android:background="@drawable/item_selector"
         android:src="@drawable/ic_baseline_attach_file_24"
         app:layout_constraintEnd_toEndOf="parent"

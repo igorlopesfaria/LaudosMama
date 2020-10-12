@@ -8,7 +8,7 @@ import br.com.laudosmama.home.databinding.HomeTimelineItemBinding
 import br.com.laudosmama.home.timeline.model.HomeTimeline
 import kotlinx.android.extensions.LayoutContainer
 
-class HomeTimelineAdapter(private val clickListener: ((HomeTimeline) -> Unit)) :
+class HomeTimelineAdapter(private val clickListenerAttachment: ((HomeTimeline) -> Unit), private val clickListenerShowLabs: (() -> Unit)) :
     RecyclerView.Adapter<HomeTimelineAdapter.HomeTimelineViewHolder>() {
 
     private val items = mutableListOf<HomeTimeline>()
@@ -20,7 +20,7 @@ class HomeTimelineAdapter(private val clickListener: ((HomeTimeline) -> Unit)) :
     }
 
     override fun onBindViewHolder(viewHolder: HomeTimelineViewHolder, position: Int) =
-        viewHolder.bind(items[position], clickListener, position, items.size)
+        viewHolder.bind(items[position], clickListenerAttachment, clickListenerShowLabs, position, items.size)
 
     override fun getItemCount() = items.size
 
@@ -36,7 +36,7 @@ class HomeTimelineAdapter(private val clickListener: ((HomeTimeline) -> Unit)) :
         override val containerView: View?
             get() = itemView
 
-        fun bind(item: HomeTimeline, listener: ((HomeTimeline) -> Unit), position: Int, size: Int) {
+        fun bind(item: HomeTimeline, attach: ((HomeTimeline) -> Unit), showLabs: (() -> Unit), position: Int, size: Int) {
             if(position == 0) {
                 itemBinding.lineBeforeGray.visibility = View.GONE
                 itemBinding.lineBeforePurple.visibility = View.GONE
@@ -47,12 +47,17 @@ class HomeTimelineAdapter(private val clickListener: ((HomeTimeline) -> Unit)) :
                 itemBinding.lineNextPurple.visibility = View.GONE
             }
 
-            if (position % 2 == 2)
+            if (position % 2 == 0)
                 itemBinding.shouldIndicateLabImageView.visibility = View.GONE
 
-            itemView.setOnClickListener {
-                listener(item)
+            itemBinding.attachImageView.setOnClickListener {
+                attach(item)
             }
+
+            itemBinding.shouldIndicateLabImageView.setOnClickListener {
+                showLabs()
+            }
+
         }
     }
 }

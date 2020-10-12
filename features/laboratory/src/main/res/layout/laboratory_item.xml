@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/item_selector"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/photoImageView"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginTop="@dimen/space_view_medium"
+        android:scaleType="centerInside"
+        app:placeholderImage="@drawable/ic_baseline_image_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        style="@style/UIToolkit.Text.Body.Medium.GrayBaseDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:text="Laboratório A+"
+        android:layout_marginTop="@dimen/space_view_medium"
+        app:layout_goneMarginStart="@dimen/space_view_little"
+        app:layout_constraintStart_toEndOf="@+id/photoImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/addressTextView"
+        style="@style/UIToolkit.Text.Caption.Regular.GrayBase75"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:text="Av. Paes de Barros, 2273 - Vila Prudente, São Paulo - SP, 03115-001"
+        android:layout_marginEnd="@dimen/space_view_small"
+        android:layout_marginTop="@dimen/space_view_minimum"
+        app:layout_constraintEnd_toStartOf="@+id/phoneImageView"
+        app:layout_goneMarginStart="@dimen/space_view_little"
+        app:layout_constraintStart_toEndOf="@+id/photoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/distanceTextView"
+        style="@style/UIToolkit.Text.Caption.Regular.GrayBase75"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginTop="@dimen/space_view_minimum"
+        android:layout_marginEnd="@dimen/space_view_small"
+        android:text="Distância: 4km"
+        app:layout_constraintEnd_toStartOf="@+id/phoneImageView"
+        app:layout_constraintStart_toEndOf="@+id/photoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/addressTextView"
+        app:layout_goneMarginStart="@dimen/space_view_little" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/phoneImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="@dimen/space_view_small"
+        android:background="@drawable/item_selector"
+        android:padding="7dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_baseline_call_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

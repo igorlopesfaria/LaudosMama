@@ -2,11 +2,12 @@ package br.com.laudosmama.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import br.com.laudosmama.features.base.BaseActivity
 import br.com.laudosmama.home.databinding.HomeActivityBinding
 import org.koin.core.context.loadKoinModules
 import org.koin.core.context.unloadKoinModules
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity() {
     private lateinit var binding: HomeActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

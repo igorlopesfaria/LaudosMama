@@ -27,6 +27,7 @@ dependencies {
     implementation project(":features")
     implementation project(":features:onboarding")
     implementation project(":features:home")
+    implementation project(":features:laboratory")
     implementation project(':repository')
     implementation project(':repository:database')
     implementation project(':repository:remote')

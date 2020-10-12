@@ -116,6 +116,9 @@
     <style name="UIToolkit.Text.Body.Medium.GrayBase75">
         <item name="android:textColor">@color/gray_base_75</item>
     </style>
+    <style name="UIToolkit.Text.Body.Medium.GrayBaseDark">
+        <item name="android:textColor">@color/gray_base_dark</item>
+    </style>
     <style name="UIToolkit.Text.Body.Bold">
         <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
