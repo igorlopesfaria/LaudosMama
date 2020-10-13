@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="report_title">"Laudo "</string>
+    <string name="report_register">Cadastrar</string>
+    <string name="report_delete">Apagar</string>
+    <string name="report_update">Atualizar</string>
+    <string name="report_exam_date">Data do exame</string>
+    <string name="report_breast_right">Mama Direita</string>
+    <string name="report_breast_left">Mama Esquerda</string>
+    <string name="report_label_email_doctor">Email do médico</string>
+    <string name="report_label_medical_report">Cópia do Laudo</string>
 </resources>

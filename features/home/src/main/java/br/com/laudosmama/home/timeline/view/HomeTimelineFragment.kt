@@ -17,7 +17,16 @@ class HomeTimelineFragment : BaseFragment() {
     private lateinit var binding: HomeTimelineFragmentBinding
     private val viewModel: HomeTimelineViewModel by viewModel()
 
-    private val adapter = HomeTimelineAdapter(::onClickAttachment, ::onClickShowLab)
+    private val adapter = HomeTimelineAdapter(::onClickDetail, ::onClickAttachment, ::onClickShowLab)
+
+    private fun onClickDetail(homeTimeline: HomeTimeline) {
+        val intent = Intent(
+            requireContext(),
+            Class.forName("br.com.laudosmama.reports.ReportActivity")
+        )
+        startActivity(intent)
+
+    }
 
     private fun onClickAttachment(homeTimeline: HomeTimeline) {
 

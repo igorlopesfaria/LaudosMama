@@ -1,7 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/space_view_extra">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hintExamDate"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginTop="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:text="@string/report_exam_date"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:viewBindingIgnore="true"/>
+
+            <EditText
+                android:id="@+id/examDateEditText"
+                style="@style/UIToolkit.Widget.EditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_custom_edittext"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/space_view_little"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:clickable="true"
+                android:focusable="false"
+                app:layout_constraintTop_toBottomOf="@+id/hintExamDate"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/calendarImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:src="@drawable/ic_baseline_calendar"
+                app:layout_constraintTop_toTopOf="@+id/examDateEditText"
+                app:layout_constraintEnd_toEndOf="@+id/examDateEditText"
+                app:layout_constraintBottom_toBottomOf="@+id/examDateEditText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hintBreastRight"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginTop="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:text="@string/report_breast_right"
+                app:layout_constraintTop_toBottomOf="@+id/examDateEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:viewBindingIgnore="true"/>
+
+            <EditText
+                android:id="@+id/breastRightEditText"
+                style="@style/UIToolkit.Widget.EditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_custom_edittext"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/space_view_little"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:clickable="true"
+                android:focusable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hintBreastRight"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/arrowRightImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintTop_toTopOf="@+id/breastRightEditText"
+                app:layout_constraintEnd_toEndOf="@+id/breastRightEditText"
+                app:layout_constraintBottom_toBottomOf="@+id/breastRightEditText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hintBreastLeft"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginTop="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:text="@string/report_breast_left"
+                app:layout_constraintTop_toBottomOf="@+id/breastRightEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:viewBindingIgnore="true"/>
+
+            <EditText
+                android:id="@+id/breastLeftEditText"
+                style="@style/UIToolkit.Widget.EditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_custom_edittext"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="@dimen/space_view_little"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:clickable="true"
+                android:focusable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hintBreastLeft"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/arrowLeftImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintTop_toTopOf="@+id/breastLeftEditText"
+                app:layout_constraintEnd_toEndOf="@+id/breastLeftEditText"
+                app:layout_constraintBottom_toBottomOf="@+id/breastLeftEditText" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hintEmailDoctor"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginTop="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:text="@string/report_label_email_doctor"
+                app:layout_constraintTop_toBottomOf="@+id/breastLeftEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:viewBindingIgnore="true"/>
+
+            <EditText
+                android:id="@+id/emailDoctorEditText"
+                style="@style/UIToolkit.Widget.EditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_custom_edittext"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="@dimen/space_view_little"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hintEmailDoctor"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/hintMedicalReport"
+                style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_view_medium"
+                android:layout_marginTop="@dimen/space_view_medium"
+                android:layout_marginEnd="@dimen/space_view_medium"
+                android:text="@string/report_label_medical_report"
+                app:layout_constraintTop_toBottomOf="@+id/emailDoctorEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:viewBindingIgnore="true"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/photoImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="@dimen/space_view_little"
+                android:layout_marginStart="@dimen/space_view_medium"
+                app:placeholderImage="@drawable/ic_baseline_image_24"
+                android:background="@color/base_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hintMedicalReport"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/space_view_small"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <br.com.laudosmama.uitoolkit.button.LoaderButton
+            android:id="@+id/registerButton"
+            style="@style/UIToolkit.Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_custom_button"
+            android:layout_marginStart="@dimen/space_view_medium"
+            android:layout_marginEnd="@dimen/space_view_medium"
+            app:uitoolkit_title="@string/report_register"
+            android:visibility="visible" />
+
+        <br.com.laudosmama.uitoolkit.button.LoaderButton
+            android:id="@+id/deleteButton"
+            style="@style/UIToolkit.Widget.Button.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_custom_button"
+            android:layout_marginStart="@dimen/space_view_medium"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/space_view_minimum"
+            app:uitoolkit_title="@string/report_delete"
+            app:uitoolkit_style="secondary"
+            android:visibility="gone"  />
+
+        <br.com.laudosmama.uitoolkit.button.LoaderButton
+            android:id="@+id/updateButton"
+            style="@style/UIToolkit.Widget.Button"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_custom_button"
+            android:layout_marginStart="@dimen/space_view_minimum"
+            android:layout_marginEnd="@dimen/space_view_medium"
+            app:uitoolkit_title="@string/report_update"
+            app:uitoolkit_style="normal"
+            android:visibility="gone" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

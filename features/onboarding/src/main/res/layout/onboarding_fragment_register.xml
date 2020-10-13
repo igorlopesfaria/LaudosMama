@@ -125,7 +125,8 @@
                 android:layout_marginEnd="@dimen/space_view_medium"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:enabled="false"
+                android:clickable="true"
+                android:focusable="false"
                 app:layout_constraintTop_toBottomOf="@+id/hintBirthday"/>
 
 

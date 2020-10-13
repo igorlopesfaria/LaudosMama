@@ -8,7 +8,9 @@ import br.com.laudosmama.home.databinding.HomeTimelineItemBinding
 import br.com.laudosmama.home.timeline.model.HomeTimeline
 import kotlinx.android.extensions.LayoutContainer
 
-class HomeTimelineAdapter(private val clickListenerAttachment: ((HomeTimeline) -> Unit), private val clickListenerShowLabs: (() -> Unit)) :
+class HomeTimelineAdapter(private val clickListenerDetail: ((HomeTimeline) -> Unit),
+                          private val clickListenerAttachment: ((HomeTimeline) -> Unit),
+                          private val clickListenerShowLabs: (() -> Unit)) :
     RecyclerView.Adapter<HomeTimelineAdapter.HomeTimelineViewHolder>() {
 
     private val items = mutableListOf<HomeTimeline>()
@@ -20,7 +22,8 @@ class HomeTimelineAdapter(private val clickListenerAttachment: ((HomeTimeline) -
     }
 
     override fun onBindViewHolder(viewHolder: HomeTimelineViewHolder, position: Int) =
-        viewHolder.bind(items[position], clickListenerAttachment, clickListenerShowLabs, position, items.size)
+        viewHolder.bind(items[position], clickListenerDetail, clickListenerAttachment,
+            clickListenerShowLabs, position, items.size)
 
     override fun getItemCount() = items.size
 
@@ -36,7 +39,7 @@ class HomeTimelineAdapter(private val clickListenerAttachment: ((HomeTimeline) -
         override val containerView: View?
             get() = itemView
 
-        fun bind(item: HomeTimeline, attach: ((HomeTimeline) -> Unit), showLabs: (() -> Unit), position: Int, size: Int) {
+        fun bind(item: HomeTimeline, detail: ((HomeTimeline) -> Unit), attach: ((HomeTimeline) -> Unit), showLabs: (() -> Unit), position: Int, size: Int) {
             if(position == 0) {
                 itemBinding.lineBeforeGray.visibility = View.GONE
                 itemBinding.lineBeforePurple.visibility = View.GONE
@@ -57,7 +60,9 @@ class HomeTimelineAdapter(private val clickListenerAttachment: ((HomeTimeline) -
             itemBinding.shouldIndicateLabImageView.setOnClickListener {
                 showLabs()
             }
-
+            itemView.setOnClickListener {
+                detail(item)
+            }
         }
     }
 }

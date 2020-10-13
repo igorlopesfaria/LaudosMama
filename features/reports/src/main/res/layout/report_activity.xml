@@ -43,6 +43,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout="@layout/report_register_fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
