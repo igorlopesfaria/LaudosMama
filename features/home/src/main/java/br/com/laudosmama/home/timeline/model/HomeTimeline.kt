@@ -1,7 +1,6 @@
 package br.com.laudosmama.home.timeline.model
 
 import android.os.Parcelable
-import br.com.laudosmama.database.model.Account
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize

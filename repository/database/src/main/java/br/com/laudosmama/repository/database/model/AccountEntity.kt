@@ -1,10 +1,10 @@
-package br.com.laudosmama.database.model
+package br.com.laudosmama.repository.database.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Account(
+data class AccountEntity(
     val token: String,
     val userId: Long,
     val firstName: String,

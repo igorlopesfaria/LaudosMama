@@ -1,7 +1,7 @@
 package br.com.laudosmama.home.profile.model
 
 import android.os.Parcelable
-import br.com.laudosmama.database.model.Account
+import br.com.laudosmama.repository.database.model.AccountEntity
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
@@ -12,7 +12,7 @@ class HomeProfileAccount(
     val birthday: String,
     val profileImagePath: String
 ) : Parcelable {
-    constructor(account: Account) : this(
+    constructor(account: AccountEntity) : this(
         firstName = account.firstName,
         lastName = account.lastName,
         cpf = account.cpf,

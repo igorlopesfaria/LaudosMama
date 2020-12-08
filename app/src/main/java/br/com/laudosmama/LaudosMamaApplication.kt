@@ -1,6 +1,7 @@
 package br.com.laudosmama
 
 import android.app.Application
+import br.com.laudosmama.modules.serviceModule
 import br.com.laudosmama.repository.database.sharedPreferencesModule
 import com.facebook.drawee.backends.pipeline.Fresco
 import org.koin.android.ext.koin.androidContext
@@ -17,7 +18,8 @@ class LaudosMamaApplication : Application() {
             androidContext(this@LaudosMamaApplication)
             koin.loadModules(
                 listOf(
-                    sharedPreferencesModule
+                    sharedPreferencesModule,
+                    serviceModule
                 )
             )
             koin.createRootScope()

@@ -1,33 +1,43 @@
 package br.com.laudosmama.onboarding.splash.viewmodel
 
-import androidx.lifecycle.LiveData
+import android.util.Log
 import androidx.lifecycle.viewModelScope
 import br.com.laudosmama.features.base.BaseViewModel
-import br.com.laudosmama.features.livedata.SingleLiveEvent
 import br.com.laudosmama.onboarding.splash.model.SplashAccount
+import br.com.laudosmama.onboarding.splash.state.SplashUiState
 import br.com.laudosmama.repository.account.AccountRepository
-import br.com.laudosmama.repository.data.Error
 import br.com.laudosmama.repository.data.Result
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import java.lang.Thread.sleep
 
 class SplashViewModel(private val accountRepository: AccountRepository) : BaseViewModel(){
 
-    private val _accountLiveData = SingleLiveEvent<Result<SplashAccount>>()
-    val accountLiveData: LiveData<Result<SplashAccount>>
-        get() = _accountLiveData
+    private val _state = MutableStateFlow<SplashUiState>(SplashUiState.Start)
+    val state: StateFlow<SplashUiState> get() = _state
 
     fun loadAccountCredentials() {
         viewModelScope.launch(Dispatchers.IO) {
-            _accountLiveData.postValue(Result.Loading)
             sleep(3000)
+            accountRepository.fetchAccount().collect { resultAccount ->
+                when (resultAccount) {
+                    is Result.Success ->
+                        if(resultAccount.data != null)
+                            _state.value = SplashUiState.Success(SplashAccount(resultAccount.data!!))
+                        else
+                            _state.value = SplashUiState.Empty
 
-            accountRepository.fetchAccount()?.let {
-                _accountLiveData.postValue(Result.Success(SplashAccount(it)))
-            } ?: run {
-                _accountLiveData.postValue(Result.Failure(Error.ItemNotFound))
+                    is Result.Failure ->
+                        _state.value = SplashUiState.Loading
+                    is Result.Loading ->
+                        _state.value = SplashUiState.Loading
+                    else -> Unit
+                }
             }
         }
     }
 }
+

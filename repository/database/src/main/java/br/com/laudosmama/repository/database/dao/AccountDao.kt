@@ -2,7 +2,7 @@ package br.com.laudosmama.repository.database.dao
 
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
-import br.com.laudosmama.database.model.Account
+import br.com.laudosmama.repository.database.model.AccountEntity
 
 class AccountDao(private val sharedPreferences: SharedPreferences) {
 
@@ -19,17 +19,17 @@ class AccountDao(private val sharedPreferences: SharedPreferences) {
     }
 
     @SuppressLint("ApplySharedPref")
-    fun saveAccount(account: Account) {
+    fun saveAccount(accountEntity: AccountEntity) {
         val editor = sharedPreferences.edit()
-        editor.putString(KEY_FIRST_NAME, account.firstName)
-        editor.putString(KEY_LAST_NAME, account.lastName)
-        editor.putLong(KEY_USER_ID, account.userId)
-        editor.putString(KEY_EMAIL, account.email)
-        editor.putString(KEY_TOKEN, account.token)
-        editor.putBoolean(KEY_VALIDATED, account.validated)
-        editor.putString(KEY_CPF, account.cpf)
-        editor.putString(KEY_BIRTHDAY, account.birthday)
-        editor.putString(KEY_PROFILE_IMAGE_PATH, account.profileImagePath)
+        editor.putString(KEY_FIRST_NAME, accountEntity.firstName)
+        editor.putString(KEY_LAST_NAME, accountEntity.lastName)
+        editor.putLong(KEY_USER_ID, accountEntity.userId)
+        editor.putString(KEY_EMAIL, accountEntity.email)
+        editor.putString(KEY_TOKEN, accountEntity.token)
+        editor.putBoolean(KEY_VALIDATED, accountEntity.validated)
+        editor.putString(KEY_CPF, accountEntity.cpf)
+        editor.putString(KEY_BIRTHDAY, accountEntity.birthday)
+        editor.putString(KEY_PROFILE_IMAGE_PATH, accountEntity.profileImagePath)
         editor.commit()
     }
 
@@ -47,10 +47,10 @@ class AccountDao(private val sharedPreferences: SharedPreferences) {
         editor.apply()
     }
 
-    fun getAccount(): Account? {
+    fun getAccount(): AccountEntity? {
         val id = getAccountId()
         return if (id > 0) {
-            Account(
+            AccountEntity(
                 userId = id,
                 firstName = getAccountFirstName(),
                 lastName = getAccountLastName(),

@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.NavHostFragment
 import br.com.laudosmama.features.base.BaseFragment
 import br.com.laudosmama.features.onboarding.databinding.OnboardingFragmentSplashBinding
 import br.com.laudosmama.onboarding.splash.model.SplashAccount
+import br.com.laudosmama.onboarding.splash.state.SplashUiState
 import br.com.laudosmama.onboarding.splash.viewmodel.SplashViewModel
-import br.com.laudosmama.repository.data.Result
+import kotlinx.coroutines.flow.collect
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class SplashFragment: BaseFragment() {
@@ -20,30 +22,26 @@ class SplashFragment: BaseFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = OnboardingFragmentSplashBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupStateFlow()
         viewModel.loadAccountCredentials()
-        setupObservers()
     }
 
-    private fun setupObservers() {
-        viewModel.accountLiveData.observe(viewLifecycleOwner, {
-            handleNavigation(it)
-        })
-    }
-
-    private fun handleNavigation(result: Result<SplashAccount>) {
-        when (result) {
-            is Result.Success -> {
-                verifyValidation(result.data)
-            }
-            is Result.Failure -> {
-                goToWelcome()
+    private fun setupStateFlow() {
+        lifecycleScope.launchWhenStarted {
+            viewModel.state.collect { uiState ->
+                when (uiState) {
+                    is SplashUiState.Success -> verifyValidation(uiState.splashAccount)
+                    is SplashUiState.Empty -> goToWelcome()
+                    is SplashUiState.DatabaseError ->goToWelcome()
+                    else -> { }
+                }
             }
         }
     }
@@ -54,7 +52,7 @@ class SplashFragment: BaseFragment() {
         }
     }
 
-    private fun goToWelcome(){
+    private fun goToWelcome() {
         NavHostFragment.findNavController(this).navigate(
             SplashFragmentDirections.actionWelcome()
         )

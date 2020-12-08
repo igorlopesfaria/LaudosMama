@@ -4,8 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import br.com.laudosmama.laboratory.R
 import br.com.laudosmama.laboratory.databinding.LaboratoryItemBinding
 import br.com.laudosmama.laboratory.list.model.LaboratoryItem
+import com.facebook.drawee.drawable.ScalingUtils
+import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import kotlinx.android.extensions.LayoutContainer
 
 
@@ -41,9 +44,17 @@ class LaboratoryListAdapter(private val clickListener: ((LaboratoryItem) -> Unit
             item: LaboratoryItem,
             listener: ((LaboratoryItem) -> Unit),
         ) {
+            val  hierarchy =
+            GenericDraweeHierarchyBuilder.newInstance(itemBinding.root.context.resources)
+                .setActualImageScaleType(ScalingUtils.ScaleType.FIT_CENTER)
+                .setPlaceholderImage(R.drawable.ic_baseline_image_24)
+            itemBinding.photoImageView.hierarchy = hierarchy.build()
             itemBinding.photoImageView.setImageURI(
-                "https://pbs.twimg.com/profile_images/1134189808564219904/p3ORVqTV_400x400.png"
+                item.logoImage
             )
+            itemBinding.nameTextView.text = item.name
+            itemBinding.addressTextView.text = item.address
+            itemBinding.distanceTextView.text = item.distance
 
             itemBinding.phoneImageView.setOnClickListener {
                 listener(item)

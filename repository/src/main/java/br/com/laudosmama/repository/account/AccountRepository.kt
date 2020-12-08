@@ -1,9 +1,11 @@
 package br.com.laudosmama.repository.account
 
-import br.com.laudosmama.database.model.Account
+import br.com.laudosmama.repository.data.Result
+import br.com.laudosmama.repository.database.model.AccountEntity
+import kotlinx.coroutines.flow.Flow
 
 interface AccountRepository {
-    suspend fun deleteAccount()
+    suspend fun deleteAccount(): Flow<Result<Unit>>
     suspend fun fetchAccountToken(): String
-    suspend fun fetchAccount(): Account?
+    suspend fun fetchAccount(): Flow<Result<AccountEntity?>>
 }

@@ -4,11 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
 import br.com.laudosmama.features.base.BaseFragment
 import br.com.laudosmama.laboratory.databinding.LaboratoryListFragmentBinding
 import br.com.laudosmama.laboratory.list.adapter.LaboratoryListAdapter
 import br.com.laudosmama.laboratory.list.model.LaboratoryItem
+import br.com.laudosmama.laboratory.list.state.LaboratoryListUiState
 import br.com.laudosmama.laboratory.list.viewmodel.LaboratoryListViewModel
+import kotlinx.coroutines.flow.collect
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class LaboratoryListFragment : BaseFragment() {
@@ -26,7 +29,7 @@ class LaboratoryListFragment : BaseFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = LaboratoryListFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -34,17 +37,36 @@ class LaboratoryListFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.timeLine.adapter = adapter
-        adapter.setAllItems(
-            listOf(
-                LaboratoryItem(),
-                LaboratoryItem(),
-                LaboratoryItem(),
-                LaboratoryItem(),
-                LaboratoryItem(),
-                LaboratoryItem()
-            )
-        )
+        binding.laboratoryList.adapter = adapter
+        setupFlow()
+        viewModel.listLaboratories()
+    }
+
+    private fun setupFlow() {
+        lifecycleScope.launchWhenStarted {
+            viewModel.stateListLaboratory.collect { uiState ->
+                when(uiState){
+                   is LaboratoryListUiState.Success -> showList(uiState.listLaboratoryItem)
+                   is LaboratoryListUiState.Empty -> showEmpty()
+                   is LaboratoryListUiState.ServerError -> showError()
+                   is LaboratoryListUiState.Loading -> showLoading()
+                   else -> Unit
+                }
+            }
+        }
+    }
+
+    private fun showList(listLaboratoryItem: List<LaboratoryItem>) {
+        adapter.setAllItems(listLaboratoryItem)
+    }
+
+    private fun showLoading() {
+    }
+
+    private fun showError() {
+    }
+
+    private fun showEmpty() {
     }
 
 }
