@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     xmlns:fresco="http://schemas.android.com/tools"
     android:background="@drawable/item_selector"
+    android:padding="@dimen/space_view_medium"
     android:clickable="true"
     android:focusable="true"
     android:layout_height="wrap_content">
@@ -12,8 +13,7 @@
         android:id="@+id/photoImageView"
         android:layout_width="72dp"
         android:layout_height="72dp"
-        android:layout_marginStart="@dimen/space_view_medium"
-        android:layout_marginTop="@dimen/space_view_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <androidx.appcompat.widget.AppCompatTextView
@@ -23,7 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/space_view_medium"
         android:text="Laboratório A+"
-        android:layout_marginTop="@dimen/space_view_medium"
         app:layout_goneMarginStart="@dimen/space_view_little"
         app:layout_constraintStart_toEndOf="@+id/photoImageView"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,6 +49,7 @@
         android:layout_marginStart="@dimen/space_view_medium"
         android:layout_marginTop="@dimen/space_view_minimum"
         android:layout_marginEnd="@dimen/space_view_small"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:text="Distância: 4km"
         app:layout_constraintEnd_toStartOf="@+id/phoneImageView"
         app:layout_constraintStart_toEndOf="@+id/photoImageView"
@@ -60,7 +60,6 @@
         android:id="@+id/phoneImageView"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="@dimen/space_view_small"
         android:background="@drawable/item_selector"
         android:padding="7dp"
         android:scaleType="centerInside"

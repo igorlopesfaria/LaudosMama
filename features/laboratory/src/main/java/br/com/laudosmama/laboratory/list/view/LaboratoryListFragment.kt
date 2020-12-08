@@ -57,10 +57,14 @@ class LaboratoryListFragment : BaseFragment() {
     }
 
     private fun showList(listLaboratoryItem: List<LaboratoryItem>) {
+        binding.laboratoryList.visibility = View.VISIBLE
+        binding.loadingAnimationLottie.visibility = View.GONE
         adapter.setAllItems(listLaboratoryItem)
     }
 
     private fun showLoading() {
+        binding.laboratoryList.visibility = View.GONE
+        binding.loadingAnimationLottie.visibility = View.VISIBLE
     }
 
     private fun showError() {
