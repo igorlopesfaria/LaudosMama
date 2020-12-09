@@ -9,41 +9,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<!--    <com.airbnb.lottie.LottieAnimationView-->
-<!--        android:id="@+id/error_image"-->
-<!--        android:layout_width="90dp"-->
-<!--        android:layout_height="90dp"-->
-<!--        android:importantForAccessibility="no"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/error_message_title"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        android:layout_marginTop="@dimen/space_view_extra"-->
-<!--        app:lottie_autoPlay="true"-->
-<!--        app:lottie_loop="false"-->
-<!--        app:lottie_fileName="error.json" />-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/error_image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toTopOf="@+id/error_message_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/space_view_extra"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_fileName="error.json" />
 
     <TextView
         android:id="@+id/error_message_title"
-        style="@style/UIToolkit.Text.BigTitle.Bold.BaseDark"
+        style="@style/UIToolkit.Text.Title.Bold.GrayBaseDark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_view_big"
         android:gravity="center"
         android:layout_marginStart="@dimen/space_view_medium"
-        android:layout_marginEnd="@dimen/space_view_medium"
-        tools:text="Parece que você está sem conexão" />
+        android:layout_marginEnd="@dimen/space_view_medium" />
 
     <TextView
         android:id="@+id/error_message_subtitle"
-        style="@style/UIToolkit.Text.Body.Regular.Base75"
+        style="@style/UIToolkit.Text.Body.Regular.GrayBase75"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/space_view_medium"
         android:layout_marginEnd="@dimen/space_view_medium"
         android:layout_marginTop="@dimen/space_view_small"
-        android:gravity="center"
-        tools:text="Verifique sua internet e tente novamente" />
+        android:gravity="center" />
 
     <br.com.laudosmama.uitoolkit.button.LoaderButton
         style="@style/UIToolkit.Widget.Button.Secondary"

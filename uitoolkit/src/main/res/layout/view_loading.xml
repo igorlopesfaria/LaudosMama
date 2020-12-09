@@ -8,18 +8,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<!--    <com.airbnb.lottie.LottieAnimationView-->
-<!--        android:id="@+id/loading_image"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="120dp"-->
-<!--        android:importantForAccessibility="no"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/empty_message_title"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:lottie_autoPlay="true"-->
-<!--        app:lottie_loop="true"-->
-<!--        app:lottie_fileName="dumbell.json" />-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingAnimationLottie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="loading.json" />
+
 
     <TextView
         android:id="@+id/loading_text"

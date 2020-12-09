@@ -36,10 +36,16 @@ class LaboratoryListFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.laboratoryList.adapter = adapter
         setupFlow()
+        setupListeners()
         viewModel.listLaboratories()
+    }
+
+    private fun setupListeners() {
+        binding.errorView.setButtonOnClickListener {
+            viewModel.listLaboratories()
+        }
     }
 
     private fun setupFlow() {
@@ -58,19 +64,31 @@ class LaboratoryListFragment : BaseFragment() {
 
     private fun showList(listLaboratoryItem: List<LaboratoryItem>) {
         binding.laboratoryList.visibility = View.VISIBLE
-        binding.loadingAnimationLottie.visibility = View.GONE
+        binding.loadingView.visibility = View.GONE
         adapter.setAllItems(listLaboratoryItem)
+        binding.emptyView.visibility = View.GONE
+        binding.errorView.visibility = View.GONE
     }
 
     private fun showLoading() {
         binding.laboratoryList.visibility = View.GONE
-        binding.loadingAnimationLottie.visibility = View.VISIBLE
+        binding.loadingView.visibility = View.VISIBLE
+        binding.emptyView.visibility = View.GONE
+        binding.errorView.visibility = View.GONE
     }
 
     private fun showError() {
+        binding.laboratoryList.visibility = View.GONE
+        binding.loadingView.visibility = View.GONE
+        binding.emptyView.visibility = View.GONE
+        binding.errorView.visibility = View.VISIBLE
     }
 
     private fun showEmpty() {
+        binding.laboratoryList.visibility = View.GONE
+        binding.loadingView.visibility = View.GONE
+        binding.emptyView.visibility = View.VISIBLE
+        binding.errorView.visibility = View.GONE
     }
 
 }

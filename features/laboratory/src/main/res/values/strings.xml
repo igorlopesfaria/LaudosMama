@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="laboratory_title">Laboratórios Sugeridos</string>
+    <string name="laboratory_loading">Carregando Laboratórios</string>
+    <string name="laboratory_list_empty">Nenhum laboratório cadastrado.</string>
+    <string name="laboratory_list_error">Problema ao listar Laboratórios.</string>
+    <string name="laboratory_list_error_description">Verifique sua internet e tente listar os laboratórios novamente.</string>
 </resources>

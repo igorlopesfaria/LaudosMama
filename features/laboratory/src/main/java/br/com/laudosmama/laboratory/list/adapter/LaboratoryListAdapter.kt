@@ -37,7 +37,7 @@ class LaboratoryListAdapter(private val clickListener: ((LaboratoryItem) -> Unit
     class LaboratoryItemViewHolder(private val itemBinding: LaboratoryItemBinding) :
         RecyclerView.ViewHolder(itemBinding.root), LayoutContainer {
 
-        override val containerView: View?
+        override val containerView: View
             get() = itemView
 
         fun bind(
@@ -54,7 +54,7 @@ class LaboratoryListAdapter(private val clickListener: ((LaboratoryItem) -> Unit
             )
             itemBinding.nameTextView.text = item.name
             itemBinding.addressTextView.text = item.address
-            itemBinding.distanceTextView.text = item.distance
+            itemBinding.emailTextView.text = "Email: ${item.email}"
 
             itemBinding.phoneImageView.setOnClickListener {
                 listener(item)

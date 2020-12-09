@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    xmlns:fresco="http://schemas.android.com/tools"
     android:background="@drawable/item_selector"
     android:padding="@dimen/space_view_medium"
     android:clickable="true"
@@ -22,7 +21,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/space_view_medium"
-        android:text="Laboratório A+"
         app:layout_goneMarginStart="@dimen/space_view_little"
         app:layout_constraintStart_toEndOf="@+id/photoImageView"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +31,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/space_view_medium"
-        android:text="Av. Paes de Barros, 2273 - Vila Prudente, São Paulo - SP, 03115-001"
         android:layout_marginEnd="@dimen/space_view_small"
         android:layout_marginTop="@dimen/space_view_minimum"
         app:layout_constraintEnd_toStartOf="@+id/phoneImageView"
@@ -42,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/distanceTextView"
+        android:id="@+id/emailTextView"
         style="@style/UIToolkit.Text.Caption.Regular.GrayBase75"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -50,7 +47,6 @@
         android:layout_marginTop="@dimen/space_view_minimum"
         android:layout_marginEnd="@dimen/space_view_small"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:text="Distância: 4km"
         app:layout_constraintEnd_toStartOf="@+id/phoneImageView"
         app:layout_constraintStart_toEndOf="@+id/photoImageView"
         app:layout_constraintTop_toBottomOf="@+id/addressTextView"

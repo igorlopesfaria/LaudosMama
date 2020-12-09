@@ -8,13 +8,13 @@ import kotlinx.android.parcel.Parcelize
 class LaboratoryItem(
     val name: String,
     val address: String,
-    val distance: String,
+    val email: String,
     val telephoneNumber: String,
     val logoImage: String
 ) : Parcelable {
     constructor(laboratoryResponse: LaboratoryResponse) : this(
         name = laboratoryResponse.name,
-        distance = "0km",
+        email = laboratoryResponse.email,
         address = laboratoryResponse.address,
         telephoneNumber = laboratoryResponse.phone,
         logoImage = laboratoryResponse.logoImage

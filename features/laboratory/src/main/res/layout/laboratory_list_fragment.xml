@@ -4,13 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/loadingAnimationLottie"
+    <br.com.laudosmama.uitoolkit.view.LoadingView
+        android:id="@+id/loadingView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_fileName="loading.json" />
+        app:uitoolkit_loading_text="@string/laboratory_loading"
+        android:visibility="visible"
+        tools:visibility="visible"/>
+
+    <br.com.laudosmama.uitoolkit.view.EmptyView
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:uitoolkit_title="@string/laboratory_list_empty"
+        android:visibility="gone"
+        tools:visibility="gone"/>
+
+    <br.com.laudosmama.uitoolkit.view.RetriableErrorView
+        android:id="@+id/errorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:uitoolkit_title="@string/laboratory_list_error"
+        app:uitoolkit_subtitle="@string/laboratory_list_error_description"
+        android:visibility="gone"
+        tools:visibility="gone"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/laboratoryList"
@@ -22,5 +39,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView"
         tools:itemCount="16"
-        tools:listitem="@layout/laboratory_item" />
+        tools:listitem="@layout/laboratory_item"
+        android:visibility="gone"
+        tools:visibility="gone"/>
 </FrameLayout>

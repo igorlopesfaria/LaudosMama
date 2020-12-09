@@ -138,6 +138,9 @@
     <style name="UIToolkit.Text.Subtitle.Medium.Base75">
         <item name="android:textColor">@color/base_75</item>
     </style>
+    <style name="UIToolkit.Text.Subtitle.Medium.GrayBaseDark">
+        <item name="android:textColor">@color/gray_base_dark</item>
+    </style>
 
     <style name="UIToolkit.Text.Title.Medium">
         <item name="android:fontFamily">@font/roboto_medium</item>
@@ -146,12 +149,18 @@
     <style name="UIToolkit.Text.Title.Medium.BaseDark">
         <item name="android:textColor">@color/base_dark</item>
     </style>
+    <style name="UIToolkit.Text.Title.Medium.GrayBaseDark">
+        <item name="android:textColor">@color/gray_base_dark</item>
+    </style>
 
     <style name="UIToolkit.Text.Title.Bold">
         <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
     <style name="UIToolkit.Text.Title.Bold.BaseDark">
         <item name="android:textColor">@color/base_dark</item>
+    </style>
+    <style name="UIToolkit.Text.Title.Bold.GrayBaseDark">
+        <item name="android:textColor">@color/gray_base_dark</item>
     </style>
 
     <style name="UIToolkit.Text.BigTitle.Medium">
