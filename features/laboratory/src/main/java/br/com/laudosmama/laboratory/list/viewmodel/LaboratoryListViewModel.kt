@@ -4,6 +4,7 @@ import androidx.lifecycle.viewModelScope
 import br.com.laudosmama.features.base.BaseViewModel
 import br.com.laudosmama.laboratory.list.model.LaboratoryItem
 import br.com.laudosmama.laboratory.list.state.LaboratoryListUiState
+import br.com.laudosmama.repository.data.Error
 import br.com.laudosmama.repository.data.Result
 import br.com.laudosmama.repository.laboratory.LaboratoryRepository
 import kotlinx.coroutines.Dispatchers
@@ -26,9 +27,7 @@ class LaboratoryListViewModel(private val laboratoryRepository: LaboratoryReposi
                     is Result.Success ->
                         if (resultRepository.data.isNotEmpty())
                             _stateListLaboratory.value = LaboratoryListUiState.Success(
-                                resultRepository.data.map {
-                                    LaboratoryItem(it)
-                                }
+                                resultRepository.data.map { LaboratoryItem(it) }
                             )
                         else _stateListLaboratory.value = LaboratoryListUiState.Empty
                     is Result.Failure ->
@@ -36,7 +35,6 @@ class LaboratoryListViewModel(private val laboratoryRepository: LaboratoryReposi
                     is Result.Loading ->
                         _stateListLaboratory.value = LaboratoryListUiState.Loading
                 }
-
             }
         }
     }

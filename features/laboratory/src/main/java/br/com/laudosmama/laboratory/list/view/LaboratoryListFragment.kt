@@ -24,7 +24,6 @@ class LaboratoryListFragment : BaseFragment() {
     private fun onClickCall(laboratoryItem: LaboratoryItem) {
 
     }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -51,7 +50,7 @@ class LaboratoryListFragment : BaseFragment() {
     private fun setupFlow() {
         lifecycleScope.launchWhenStarted {
             viewModel.stateListLaboratory.collect { uiState ->
-                when(uiState){
+                when(uiState) {
                    is LaboratoryListUiState.Success -> showList(uiState.listLaboratoryItem)
                    is LaboratoryListUiState.Empty -> showEmpty()
                    is LaboratoryListUiState.ServerError -> showError()
