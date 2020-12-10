@@ -6,6 +6,6 @@ import retrofit2.http.Path
 
 interface LaboratoryService {
 
-    @GET("/laboratory?currentPage=0&pageSize=100")
+    @GET("/laboratory?currentPage=10&pageSize=100")
     suspend fun getLaboratories(): List<LaboratoryResponse>
 }

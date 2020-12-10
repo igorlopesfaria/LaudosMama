@@ -37,9 +37,7 @@
     <fragment
         android:id="@+id/laboratoryList"
         android:name="br.com.laudosmama.laboratory.list.view.LaboratoryListFragment"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:layout="@layout/laboratory_list_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

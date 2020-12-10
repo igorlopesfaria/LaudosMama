@@ -11,15 +11,16 @@
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/empty_image"
         android:layout_width="wrap_content"
-        android:layout_height="220dp"
+        android:layout_height="90dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toTopOf="@+id/empty_message_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/space_view_medium"
         app:lottie_autoPlay="true"
-        app:lottie_loop="false"
-        app:lottie_fileName="empty.json" />
+        app:lottie_loop="true"
+        app:lottie_fileName="empty2.json" />
 
     <TextView
         android:id="@+id/empty_message_title"
