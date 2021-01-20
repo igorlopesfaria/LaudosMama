@@ -15,6 +15,6 @@ class AccountRepositoryImpl(private val accountDao: AccountDao) :
     override suspend fun fetchAccount(): Flow<Result<AccountEntity?>> =
         fetchLocal { accountDao.getAccount() }
 
-    override suspend fun fetchAccountToken(): String =
-        accountDao.getAccountToken()
+    override suspend fun getAccountId(): String =
+        accountDao.getAccountId()
 }

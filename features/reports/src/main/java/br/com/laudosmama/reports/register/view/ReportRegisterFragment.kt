@@ -8,16 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.laudosmama.features.base.BaseFragment
 import br.com.laudosmama.reports.databinding.ReportRegisterFragmentBinding
-import br.com.laudosmama.reports.register.viewmodel.ReportViewModel
+import br.com.laudosmama.reports.register.viewmodel.ReportRegisterViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.Locale
 
 
 class ReportRegisterFragment : BaseFragment() {
 
     private lateinit var binding: ReportRegisterFragmentBinding
-    private val viewModel: ReportViewModel by viewModel()
+    private val reportRegisterViewModel: ReportRegisterViewModel by viewModel()
     private val myCalendar = Calendar.getInstance()
 
 
@@ -25,7 +26,7 @@ class ReportRegisterFragment : BaseFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = ReportRegisterFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }

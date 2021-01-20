@@ -36,7 +36,7 @@ class HomeTimelineAdapter(private val clickListenerDetail: ((HomeTimeline) -> Un
     class HomeTimelineViewHolder(private val itemBinding: HomeTimelineItemBinding) :
         RecyclerView.ViewHolder(itemBinding.root), LayoutContainer {
 
-        override val containerView: View?
+        override val containerView: View
             get() = itemView
 
         fun bind(item: HomeTimeline, detail: ((HomeTimeline) -> Unit), attach: ((HomeTimeline) -> Unit), showLabs: (() -> Unit), position: Int, size: Int) {

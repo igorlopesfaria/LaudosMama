@@ -2,7 +2,7 @@ package br.com.laudosmama.repository.remote.model.response
 
 import com.google.gson.annotations.SerializedName
 
-data class LaboratoryResponse (
+data class LaboratoryItemResponse (
     @SerializedName(value = "id")
     val id: String,
 

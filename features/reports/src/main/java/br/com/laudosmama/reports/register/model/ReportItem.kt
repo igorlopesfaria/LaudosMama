@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class ReportItem(
+class ReportRegisterItem(
     val id: Long = 1,
     val examDate: String = "",
     val rightBreast: String = "",

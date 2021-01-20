@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface AccountRepository {
     suspend fun deleteAccount(): Flow<Result<Unit>>
-    suspend fun fetchAccountToken(): String
+    suspend fun getAccountId(): String
     suspend fun fetchAccount(): Flow<Result<AccountEntity?>>
 }

@@ -23,7 +23,7 @@ class AccountDao(private val sharedPreferences: SharedPreferences) {
         val editor = sharedPreferences.edit()
         editor.putString(KEY_FIRST_NAME, accountEntity.firstName)
         editor.putString(KEY_LAST_NAME, accountEntity.lastName)
-        editor.putLong(KEY_USER_ID, accountEntity.userId)
+        editor.putString(KEY_USER_ID, accountEntity.userId)
         editor.putString(KEY_EMAIL, accountEntity.email)
         editor.putString(KEY_TOKEN, accountEntity.token)
         editor.putBoolean(KEY_VALIDATED, accountEntity.validated)
@@ -37,7 +37,7 @@ class AccountDao(private val sharedPreferences: SharedPreferences) {
         val editor = sharedPreferences.edit()
         editor.putString(KEY_FIRST_NAME, null)
         editor.putString(KEY_LAST_NAME, null)
-        editor.putLong(KEY_USER_ID, NO_USER)
+        editor.putString(KEY_USER_ID, NO_USER)
         editor.putString(KEY_EMAIL, null)
         editor.putString(KEY_TOKEN, null)
         editor.putBoolean(KEY_VALIDATED, false)
@@ -49,7 +49,7 @@ class AccountDao(private val sharedPreferences: SharedPreferences) {
 
     fun getAccount(): AccountEntity? {
         val id = getAccountId()
-        return if (id > 0) {
+        return if (id.toLong() > 0) {
             AccountEntity(
                 userId = id,
                 firstName = getAccountFirstName(),
@@ -64,8 +64,8 @@ class AccountDao(private val sharedPreferences: SharedPreferences) {
         } else null
     }
 
-    private fun getAccountId(): Long =
-        sharedPreferences.getLong(KEY_USER_ID, NO_USER)
+    fun getAccountId(): String =
+        sharedPreferences.getString(KEY_USER_ID, NO_USER).toString()
 
     private fun getAccountFirstName(): String =
         sharedPreferences.getString(KEY_FIRST_NAME, "").toString()
@@ -76,7 +76,7 @@ class AccountDao(private val sharedPreferences: SharedPreferences) {
     private fun getAccountEmail(): String =
         sharedPreferences.getString(KEY_EMAIL, "").toString()
 
-    fun getAccountToken(): String =
+    private fun getAccountToken(): String =
         sharedPreferences.getString(KEY_TOKEN, "").toString()
 
     private fun isValidated(): Boolean =
@@ -93,4 +93,4 @@ class AccountDao(private val sharedPreferences: SharedPreferences) {
 
 }
 
-private const val NO_USER = -1L
+private const val NO_USER = "-1"

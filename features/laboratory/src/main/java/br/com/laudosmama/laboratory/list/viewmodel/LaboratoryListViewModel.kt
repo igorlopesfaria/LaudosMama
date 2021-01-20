@@ -4,7 +4,6 @@ import androidx.lifecycle.viewModelScope
 import br.com.laudosmama.features.base.BaseViewModel
 import br.com.laudosmama.laboratory.list.model.LaboratoryItem
 import br.com.laudosmama.laboratory.list.state.LaboratoryListUiState
-import br.com.laudosmama.repository.data.Error
 import br.com.laudosmama.repository.data.Result
 import br.com.laudosmama.repository.laboratory.LaboratoryRepository
 import kotlinx.coroutines.Dispatchers
@@ -22,7 +21,7 @@ class LaboratoryListViewModel(private val laboratoryRepository: LaboratoryReposi
 
     fun listLaboratories() {
         viewModelScope.launch(Dispatchers.IO) {
-            laboratoryRepository.getLaboratories().collect { resultRepository ->
+            laboratoryRepository.fetchLaboratories().collect { resultRepository ->
                 when (resultRepository) {
                     is Result.Success ->
                         if (resultRepository.data.isNotEmpty())

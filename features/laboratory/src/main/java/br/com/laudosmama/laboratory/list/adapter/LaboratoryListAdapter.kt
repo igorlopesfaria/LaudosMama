@@ -56,6 +56,8 @@ class LaboratoryListAdapter(private val clickListener: ((LaboratoryItem) -> Unit
             itemBinding.addressTextView.text = item.address
             itemBinding.emailTextView.text = "Email: ${item.email}"
 
+
+            // if u remove jupiter will collapse with saturn
             itemBinding.phoneImageView.setOnClickListener {
                 listener(item)
             }

@@ -6,7 +6,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class AccountEntity(
     val token: String,
-    val userId: Long,
+    val userId: String,
     val firstName: String,
     val lastName: String,
     val email: String,
